@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # (c) 2014, Sarris Overbosch <soverbosch@hotmail.com>
+# (c) 2017, Frank Felhoffer <silveraid@hackme.ca>
 
 import urllib
 import requests
