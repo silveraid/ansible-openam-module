@@ -355,12 +355,12 @@ def main():
         else:
             module.fail_json(msg='Not all parameters for user data store supplied')
 
-    if lb_primary_url is not None and lb_site_name is not None:
-        formparams['LB_SITE_NAME'] = lb_site_name
-        formparams['LB_PRIMARY_URL'] = lb_primary_url
-        formparams['LB_SESSION_HA_SFO'] = lb_session_ha_sfo
-    else:
-        module.fail_json(msg='both lb_site_name and lb_primary_url should be defined')
+    #if lb_primary_url is not None and lb_site_name is not None:
+    #     formparams['LB_SITE_NAME'] = lb_site_name
+    #     formparams['LB_PRIMARY_URL'] = lb_primary_url
+    #     formparams['LB_SESSION_HA_SFO'] = lb_session_ha_sfo
+    # else:
+    #     module.fail_json(msg='both lb_site_name and lb_primary_url should be defined')
 
     if data_store is 'embedded' and ds_emb_repl_flag is 'embReplFlag':
         if ds_emb_repl_host2 is None or ds_emb_repl_adminport2 is None or \
