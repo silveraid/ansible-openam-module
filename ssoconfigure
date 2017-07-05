@@ -389,8 +389,8 @@ def main():
     response.close()
 
     if response.status_code == requests.codes.ok:
-        module.exit_json(changed=True, msg=response.text)
+        module.exit_json(changed=True, msg='Code: ' + str(response.status_code) + ', Response: ' + response.test + ', Progress: ' + progress)
     else:
-        module.fail_json(msg='Configuration failed!' + response.text)
+        module.fail_json(msg='Configuration failed! Code: ' + str(response.status_code) + ', Response:' + response.text + ', Progress: ' + progress)
 
 main()
